@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Algorithm Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body class="light">
+
+    <header>
+        <div class="container">
+            <h1>Sorting Algorithm Visualizer</h1>
+            <div class="controls">
+                <div class="input-container">
+                    <label for="a_size">Array Size:</label>
+                    <input type="range" id="a_size" min="20" max="80" value="80" step="1" aria-label="Array size slider">
+                    <span id="array-size-display">80</span>
+                </div>
+                <div class="input-container">
+                    <label for="speed">Speed:</label>
+                    <input type="range" id="speed" min="1" max="50" value="50" step="1" aria-label="Sorting speed slider">
+                    <span id="speed-display">50</span>
+                </div>
+                <button id="a_generate">Generate New Array</button>
+                <button id="reset">Reset</button>
+                <button id="pause">Pause</button>
+                <button id="resume">Resume</button>
+            </div>
+            <div class="algorithms">
+                <button class="algo-btn" id="bubbleSort">Bubble Sort</button>
+                <button class="algo-btn" id="selectionSort">Selection Sort</button>
+                <button class="algo-btn" id="insertionSort">Insertion Sort</button>
+                <button class="algo-btn" id="mergeSort">Merge Sort</button>
+                <button class="algo-btn" id="quickSort">Quick Sort</button>
+                <button class="algo-btn" id="heapSort">Heap Sort</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div id="array-container" class="array-container">
+            <p id="placeholder">Click "Generate New Array"</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="themes">
+            <button id="lightMode"><i class="fa-solid fa-sun" style="color: #FFD43B;"></i>Light Mode</button>
+            <button id="darkMode"><i class="fa-solid fa-moon"></i>Dark Mode</button>
+        </div>
+        <p>&copy; 2024 Sorting Visualizer. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
