@@ -313,7 +313,7 @@ function delay(ms) {
             if (!isPaused) {
                 resolve();
             } else {
-                setTimeout(checkPause, 100); 
+                setTimeout(checkPause, 100);
             }
         };
         setTimeout(checkPause, ms);
@@ -337,5 +337,26 @@ lightModeButton.addEventListener('click', () => {
 darkModeButton.addEventListener('click', () => {
     document.body.classList.remove('light');
     document.body.classList.add('dark');
+});
+
+arraySizeInput.addEventListener('input', function () {
+    document.getElementById('array-size-display').textContent = arraySizeInput.value;
+});
+
+
+let currentArray = generateArray(arraySizeInput.value);
+createBars(currentArray);
+document.getElementById('array-size-display').textContent = currentArray.length;
+
+arraySizeInput.addEventListener('input', function () {
+    currentArray = generateArray(arraySizeInput.value);
+    createBars(currentArray);
+    document.getElementById('array-size-display').textContent = currentArray.length;
+});
+
+generateButton.addEventListener('click', () => {
+    currentArray = generateArray(arraySizeInput.value);
+    createBars(currentArray);
+    document.getElementById('array-size-display').textContent = currentArray.length;
 });
 
